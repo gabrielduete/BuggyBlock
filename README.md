@@ -13,15 +13,12 @@ Desenvolvido apenas pra matar curiosidade de como funciona o pygame.
 
 # ▶ Como usar
 
-- Para executar, é necessário o python-3.7+
+- Para executar, é necessário o python-3.7+ e a biblioteca PYGAME instalada.
 
 - Faça o download ZIP
 
-- Depois de baixar, Clique em "Extract Here"
+- Depois de baixar, clique em "Extract Here"
 
 - Execute o arquivo 'joguin'
 
 - Divirta-se :D
-
-
-
