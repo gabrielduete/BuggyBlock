@@ -6,16 +6,16 @@ import winsound
 #Som Princioal!
 def SomPrincipal():
     #Usando o winsound e passando 4 parâmetros.Fazendo com que a musica seja reproduzida de fundo e em loop.
-    winsound.PlaySound("sons/Evil Morty's Theme (For The Damaged Coda).wav",winsound.SND_FILENAME+winsound.SND_LOOP+winsound.SND_ASYNC)
+    winsound.PlaySound("sons/Hunter x Hunter Ending 6 - Hyori Ittai (Version 2) 8-bit NES Remix.wav",winsound.SND_FILENAME+winsound.SND_LOOP+winsound.SND_ASYNC)
 
 #Função principal!
 def main():
-    #---------------------------------------------------------# 
     #Areá das variaveis
-
     pygame.init()
     tela=pygame.display.set_mode([500,500])
-    pygame.display.set_caption("Buggy Block")
+    pygame.display.set_caption("BuggyBlock")
+    icone = pygame.image.load("imagens/imgLogo2.png")
+    pygame.display.set_icon(icone)
     relogio=pygame.time.Clock()
     corTelaPrincipal=(28,28,28)
     corSuperficie1=(54,54,54)
@@ -67,16 +67,13 @@ def main():
     #---------------------------------------------------------#
     
     sair=False
-    icone = pygame.image.load("imagens/imgLogo.png")
-    pygame.display.set_icon(icone)
     while sair!=True:
         tela.fill(corTelaPrincipal)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 sair=True
 
-            #====================================#
-               #Movimentação do bloco principal
+            #Movimentação do bloco principal
             (xant,yant)=(ret.left,ret.top)
             (ret.left,ret.top)=pygame.mouse.get_pos()
             ret.left=ret.left-ret.width/2
@@ -84,18 +81,19 @@ def main():
             if event.type==pygame.MOUSEBUTTONDOWN:
                 pygame.mouse.set_pos(28,20)
                 main()
-            #=====================================#
+
         #====================================##=====================================##=====================================#
+
         #Colisões
         if ret.colliderect(ret2) or ret.colliderect(ret3) or ret.colliderect(ret4) or ret.colliderect(ret5) or ret.colliderect(ret6) or ret.colliderect(ret7) or ret.colliderect(ret8) or ret.colliderect(ret9) or ret.colliderect(ret10) or ret.colliderect(ret11) or ret.colliderect(ret12) or ret.colliderect(ret13) or ret.colliderect(ret14) or ret.colliderect(ret15) or ret.colliderect(ret16) or ret.colliderect(ret17) or ret.colliderect(ret18) or ret.colliderect(ret19) or ret.colliderect(ret20) or ret.colliderect(ret21) or ret.colliderect(wallCima) or ret.colliderect(wallDireita) or ret.colliderect(wallEsquerda):
             pygame.mouse.set_pos(30,20)
             (ret.left,ret.top)=(xant,yant)
-        #=====================================##=====================================##=====================================#            
 
+        #=====================================##=====================================##=====================================#            
         if ret.top > 450:
             text=fonte_perdeu.render('Parabéns!',1,(255,255,255))
             tela.blit(text,(150,100))
-            text=fonte_perdeu.render('Obrigado por jogar Buggy Block! Clique para recomeçar',1,(255,255,255))
+            text=fonte_perdeu.render('Obrigado por jogar BuggyBlock! Clique para recomeçar',1,(255,255,255))
             tela.blit(text,(10,150))
             text=fonte_perdeu.render('Clique para recomeçar',1,(255,255,255))
             tela.blit(text,(70,200))
@@ -145,5 +143,4 @@ def main():
         pygame.draw.rect(tela,corButton2,wallEsquerda)
         pygame.draw.rect(tela,corButton2,wallCima)
         pygame.display.update()
-        
     pygame.quit()
