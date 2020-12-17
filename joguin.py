@@ -2,20 +2,22 @@
 import pygame
 import winsound
 #=================#
+
 #Som Princioal!
 def SomPrincipal():
     #Usando o winsound e passando 4 parâmetros.Fazendo com que a musica seja reproduzida de fundo e em loop.
-    winsound.PlaySound('udr.wav',winsound.SND_FILENAME+winsound.SND_LOOP+winsound.SND_ASYNC)
+    winsound.PlaySound("sons/Evil Morty's Theme (For The Damaged Coda).wav",winsound.SND_FILENAME+winsound.SND_LOOP+winsound.SND_ASYNC)
+
 #Função principal!
 def main():
     #---------------------------------------------------------# 
-    #Areá das variaveis 
+    #Areá das variaveis
+
     pygame.init()
     tela=pygame.display.set_mode([500,500])
     pygame.display.set_caption("Buggy Block")
     relogio=pygame.time.Clock()
     corTelaPrincipal=(28,28,28)
-    #superficie=pygame.Surface((300,300))
     corSuperficie1=(54,54,54)
     corButton=(0,0,128)
     corButton2=(139,0,139)
@@ -55,9 +57,7 @@ def main():
     wallDireita=pygame.Rect(493,0,20,600)
     wallEsquerda=pygame.Rect(0,0,7,600)
     wallCima=pygame.Rect(0,0,500,2)
-    
 
-    
     #--------------------------------------------------------#
     #DECLRAÇÃO DE FONTES!
     pygame.font.init()
@@ -65,11 +65,12 @@ def main():
     fonte_perdeu=pygame.font.SysFont(font_padrao,45)
     fonte_ganhou=pygame.font.SysFont(font_padrao,45)
     #---------------------------------------------------------#
-
+    
     sair=False
+    icone = pygame.image.load("imagens/imgLogo.png")
+    pygame.display.set_icon(icone)
     while sair!=True:
         tela.fill(corTelaPrincipal)
-        #tela.blit(superficie,(10,10))
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 sair=True
@@ -85,10 +86,8 @@ def main():
                 main()
             #=====================================#
         #====================================##=====================================##=====================================#
-                #Colisões
+        #Colisões
         if ret.colliderect(ret2) or ret.colliderect(ret3) or ret.colliderect(ret4) or ret.colliderect(ret5) or ret.colliderect(ret6) or ret.colliderect(ret7) or ret.colliderect(ret8) or ret.colliderect(ret9) or ret.colliderect(ret10) or ret.colliderect(ret11) or ret.colliderect(ret12) or ret.colliderect(ret13) or ret.colliderect(ret14) or ret.colliderect(ret15) or ret.colliderect(ret16) or ret.colliderect(ret17) or ret.colliderect(ret18) or ret.colliderect(ret19) or ret.colliderect(ret20) or ret.colliderect(ret21) or ret.colliderect(wallCima) or ret.colliderect(wallDireita) or ret.colliderect(wallEsquerda):
-            text=fonte_perdeu.render('Você Perdeu!',1,(255,255,255))
-            tela.blit(text,(250,250))
             pygame.mouse.set_pos(30,20)
             (ret.left,ret.top)=(xant,yant)
         #=====================================##=====================================##=====================================#            
@@ -96,8 +95,10 @@ def main():
         if ret.top > 450:
             text=fonte_perdeu.render('Parabéns!',1,(255,255,255))
             tela.blit(text,(150,100))
-            text=fonte_perdeu.render('Obrigado por jogar Buggy Block!',1,(255,255,255))
+            text=fonte_perdeu.render('Obrigado por jogar Buggy Block! Clique para recomeçar',1,(255,255,255))
             tela.blit(text,(10,150))
+            text=fonte_perdeu.render('Clique para recomeçar',1,(255,255,255))
+            tela.blit(text,(70,200))
             ret2.left=600
             ret3.left=600
             ret4.left=600
@@ -144,6 +145,5 @@ def main():
         pygame.draw.rect(tela,corButton2,wallEsquerda)
         pygame.draw.rect(tela,corButton2,wallCima)
         pygame.display.update()
+        
     pygame.quit()
-SomPrincipal()
-main()
