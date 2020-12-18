@@ -19,6 +19,6 @@ Desenvolvido apenas pra matar curiosidade de como funciona o pygame.
 
 - Depois de baixar, clique em "Extract Here"
 
-- Execute o arquivo 'joguin'
+- Execute o arquivo 'telaMenu.py'
 
 - Divirta-se :D
