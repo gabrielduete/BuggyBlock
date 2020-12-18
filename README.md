@@ -11,14 +11,18 @@ Desenvolvido apenas pra matar curiosidade de como funciona o pygame.
 
 - [Python](https://www.python.org/)
 
-# ▶ Como usar
+# ▶ Como baixar
+- Acesse o link: https://www.mediafire.com/file/vga29l2v5jst4g9/BuggyBlock.rar/file
 
-- Para executar, é necessário o python-3.7+ e a biblioteca PYGAME instalada.
+- Clique em "extract here"
+
+- Abra a pasta e clique no arquivo "BuggyBlock".
+
+- Divirta-se :D
+
+# ▶ Para baixar os arquivos
+- É necessário o python-3.7+ e as bibliotecas PYGAME e TKINTER instaladas.
 
 - Faça o download ZIP
 
 - Depois de baixar, clique em "Extract Here"
-
-- Execute o arquivo 'telaMenu.py'
-
-- Divirta-se :D
