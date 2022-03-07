@@ -18,6 +18,8 @@ Desenvolvido apenas pra matar curiosidade de como funciona o pygame.
 # ▶ Como baixar
 - Acesse o link: https://drive.google.com/file/d/1YsIB7534SGBUK7vz9HVaHEFPTJJ3wG6O/view?usp=sharing
 
+- Baixe o .rar
+
 - Clique em "extract here"
 
 - Abra a pasta e clique no arquivo "BuggyBlock".
