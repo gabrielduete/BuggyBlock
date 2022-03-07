@@ -16,7 +16,7 @@ Desenvolvido apenas pra matar curiosidade de como funciona o pygame.
 - Musica: https://www.youtube.com/watch?v=qujCDZgxoRI&ab_channel=Musikage 
 
 # ▶ Como baixar
-- Acesse o link: https://www.mediafire.com/file/vga29l2v5jst4g9/BuggyBlock.rar/file
+- Acesse o link: https://drive.google.com/file/d/1YsIB7534SGBUK7vz9HVaHEFPTJJ3wG6O/view?usp=sharing
 
 - Clique em "extract here"
 
